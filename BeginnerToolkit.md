@@ -299,8 +299,7 @@ Click Create Static Site and wait for deployment.
 # Final Output
 
 You will receive a live link such as:
-
-[https://frontend-auth.onrender.com](https://frontend-auth.onrender.com)
+https://login-signup-page-with-ai-help.onrender.com
 
 ---
 
