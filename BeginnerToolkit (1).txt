@@ -1,0 +1,358 @@
+## Static Login and Signup UI (HTML/CSS) + Render Deployment
+
+---
+
+# 1. Project Objective
+
+This project demonstrates how to:
+
+* Use generative AI prompts to learn frontend development
+* Build a simple Login and Signup UI using HTML and CSS
+* Deploy a static website using Render
+* Document the learning process using AI prompts
+
+The goal is to show how AI can assist beginners in building and deploying a working project.
+
+---
+
+# 2. Technology Overview
+
+### What is this project using?
+
+* HTML (HyperText Markup Language)
+  Used to structure web pages such as forms, inputs, and buttons
+
+* CSS (Cascading Style Sheets)
+  Used to style and design the user interface
+
+* Render
+  A cloud platform used to deploy static websites online
+
+---
+
+### Real-world use
+
+Login systems are used in:
+
+* Social media platforms
+* Banking applications
+* E-commerce websites
+
+---
+
+# 3. System Requirements
+
+* Laptop or PC (Linux, Windows, or Mac)
+* Code editor such as VS Code
+* Web browser such as Chrome
+* Internet connection
+* Git installed
+* GitHub account
+* Render account
+
+---
+
+# 4. AI Prompt Strategy
+
+This project is built using prompt engineering. Below are the prompts used and the reason for using them.
+
+---
+
+## Prompt 1: Basic UI Generation
+
+Prompt used:
+“Create a simple login page using HTML and CSS with a clean modern design”
+
+Why this prompt was used:
+To generate a starting structure without manually writing all the code.
+
+What I learned:
+
+* How HTML forms are structured
+* How CSS is used for layout and styling
+
+Result:
+AI generated a basic login page with input fields and a button.
+
+---
+
+## Prompt 2: Extending the Project
+
+Prompt used:
+“Create a signup page similar to the login page with email, username and password fields”
+
+Why this prompt was used:
+To ensure consistency between the login and signup pages.
+
+What I learned:
+
+* How to reuse UI patterns
+* How to create multiple pages in a project
+
+---
+
+## Prompt 3: Fixing Errors
+
+Prompt used:
+“My CSS is not applying to my HTML, how do I fix it?”
+
+Why this prompt was used:
+To debug styling issues.
+
+What I learned:
+
+* Correct file linking using link rel stylesheet
+* Common beginner mistakes
+
+---
+
+## Prompt 4: Deployment
+
+Prompt used:
+“How do I deploy a static HTML website using Render?”
+
+Why this prompt was used:
+To learn how to make the project accessible online.
+
+What I learned:
+
+* How to use GitHub with Render
+* How static hosting works
+
+---
+
+# 5. Project Structure
+
+frontend-auth/
+│── index.html
+│── signup.html
+│── style.css
+│── README.md
+
+---
+
+# 6. Minimal Working Code
+
+## index.html (Login Page)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+
+    <form>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+</div>
+
+</body>
+</html>
+```
+
+---
+
+## signup.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Sign Up</h2>
+
+    <form>
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Create Account</button>
+    </form>
+
+    <p>Already have an account? <a href="index.html">Login</a></p>
+</div>
+
+</body>
+</html>
+```
+
+---
+
+## style.css
+
+```css
+body {
+    font-family: Arial;
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #00ff99;
+    border: none;
+    cursor: pointer;
+}
+```
+
+---
+
+# 7. Deployment on Render
+
+## Step 1: Create GitHub Account
+
+* Go to [https://github.com](https://github.com)
+* Click sign up
+* Create account
+* Verify email
+
+---
+
+## Step 2: Create Repository
+
+* Click New Repository
+* Name it frontend-auth
+* Set it to Public
+* Click Create Repository
+
+---
+
+## Step 3: Upload Project to GitHub
+
+Run the following commands:
+
+```bash
+git init
+git add .
+git commit -m "initial commit"
+git branch -M main
+git remote add origin https://github.com/yourusername/frontend-auth.git
+git push -u origin main
+```
+
+---
+
+## Step 4: Create Render Account
+
+* Go to [https://render.com](https://render.com)
+* Sign up
+* Connect your GitHub account
+
+---
+
+## Step 5: Deploy on Render
+
+* Click New
+* Select Static Site
+* Choose your repository
+
+---
+
+## Step 6: Configure Settings
+
+* Name: frontend-auth
+* Branch: main
+* Build Command: leave empty
+* Publish Directory: .
+
+---
+
+## Step 7: Deploy
+
+Click Create Static Site and wait for deployment.
+
+---
+
+# Final Output
+
+You will receive a live link such as:
+
+[https://frontend-auth.onrender.com](https://frontend-auth.onrender.com)
+
+---
+
+# 8. Common Issues and Fixes
+
+## CSS not loading
+
+Check:
+
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+---
+
+## Git push fails
+
+Run:
+
+```bash
+git config --global user.name "yourname"
+git config --global user.email "youremail"
+```
+
+---
+
+## Render deployment issues
+
+Ensure:
+
+* Repository is public
+* Publish directory is set to .
+* GitHub is connected
+
+---
+
+# 9. References
+
+* [https://developer.mozilla.org](https://developer.mozilla.org)
+* [https://render.com/docs](https://render.com/docs)
+* [https://github.com](https://github.com)
+* [https://www.w3schools.com](https://www.w3schools.com)
+
+---
+
+# 10. Reflection
+
+This project helped me understand:
+
+* How to use AI effectively for learning
+* How to build a structured frontend project
+* How to debug issues using prompts
+* How to deploy a live website
+
+AI made the learning process faster, more interactive, and more efficient.
